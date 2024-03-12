@@ -1,0 +1,167 @@
+@use "global" as *;
+
+.button {
+  position: relative;
+  display: inline-block;
+  line-height: rem(22);
+  font-size: rem(14);
+  color: $white;
+  background-color: $blue;
+  padding: rem(16) rem(40);
+  text-align: center;
+  font-family: $second-font-family;
+  width: rem(202);
+  height: rem(54);
+  @include mq(md) {
+    width: rem(202);
+    height: rem(56);
+    z-index: 11;
+  }
+}
+.button p {
+  z-index: 10;
+  position: absolute;
+}
+.button::after {
+  content: "";
+  position: absolute;
+  top: rem(4);
+  left: rem(4);
+  width: 100%;
+  height: 100%;
+  border: rem(1) solid $blue;
+  z-index: 2;
+}
+
+.button span {
+  margin-right: rem(2);
+  margin-left: rem(5);
+}
+
+.stickarrow {
+  display: inline-block;
+  width: rem(40);
+  height: rem(8);
+  border-bottom: rem(1) solid $white;
+  border-right: rem(1) solid $white;
+  transform: skew(45deg);
+  padding-bottom: rem(2);
+  margin: rem(0) rem(0) rem(2) rem(0);
+}
+.button a {
+  display: block;
+  z-index: 15;
+}
+.buttonslide {
+  position: absolute;
+  width: rem(202);
+  height: rem(54);
+  top: calc(50% + rem(0));
+  left: calc(50% + rem(0));
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+.buttonslide::after {
+  background: gray;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: 0.2s cubic-bezier(0.45, 0, 0.55, 1);
+  z-index: -1;
+}
+.buttonslide:hover {
+  color: $white;
+  z-index: 5;
+}
+.buttonslide:hover::after {
+  transform: scale(1, 1);
+}
+.buttonslide:hover + p {
+  z-index: 6; /* .button p の z-index を増やす */
+}
+.buttonslide:hover .button::after {
+  transform: scale(1, 1);
+}
+
+.buttonslide:hover {
+  color: $white;
+  z-index: 5;
+}
+
+.button__information {
+  text-align: center;
+  margin-top: rem(40);
+  margin-right: rem(2);
+  @include mq(md) {
+    position: absolute;
+    top: calc(50% + rem(88));
+    left: calc(50% + rem(292));
+    transform: translate(-50%, -50%);
+  }
+}
+
+.button__campaign {
+  text-align: center;
+  margin-right: rem(4);
+  @include mq(md) {
+    margin: rem(76) rem(16) 0 0;
+  }
+}
+.button__about {
+  text-align: center;
+  position: absolute;
+  z-index: 10;
+  position: absolute;
+  top: calc(50% + rem(328));
+  left: calc(50% - rem(2));
+  transform: translate(-50%, -50%);
+  @include mq(md) {
+    top: calc(50% + rem(230));
+    left: calc(50% + rem(296));
+    transform: translate(-50%, -50%);
+  }
+}
+.button__blog {
+  text-align: center;
+  margin-right: rem(2);
+  margin-top: rem(24);
+  @include mq(md) {
+    margin: rem(120) rem(14) 0 0;
+    padding: 0 0 0 rem(8);
+  }
+}
+
+.button__voice {
+  text-align: center;
+  margin: rem(8) rem(2) 0 0;
+  @include mq(md) {
+    text-align: center;
+    margin: rem(80) rem(4) 0 0;
+  }
+}
+.button__contact {
+  margin-top: rem(36);
+  padding: 0;
+  @include mq(md) {
+    position: absolute;
+    top: calc(50% + rem(72));
+    left: calc(50% + rem(268));
+    transform: translate(-50%, -50%);
+    margin: 0;
+    text-align: center;
+  }
+}
+.button__price {
+  margin-top: rem(40);
+  margin-right: rem(2);
+  text-align: center;
+  @include mq(md) {
+    margin-top: rem(80);
+    margin-right: rem(6);
+  }
+}

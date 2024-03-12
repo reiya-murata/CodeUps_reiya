@@ -1,0 +1,15 @@
+@use "global" as *;
+
+.contact {
+  position: relative;
+
+  @include mq(md) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+}
+.section__contact {
+  position: relative;
+}

@@ -1,0 +1,16 @@
+@use "global" as *;
+
+.information {
+  position: relative;
+  background-color: #ddf0f1;
+  padding: rem(82) 0 rem(70);
+  box-shadow: 0 rem(2) rem(4) 0 rgba(0, 0, 0, 0.5);
+  @include mq(md) {
+    padding: rem(94) 0 rem(76);
+    box-shadow: none;
+  }
+}
+
+.section__information {
+  position: relative;
+}

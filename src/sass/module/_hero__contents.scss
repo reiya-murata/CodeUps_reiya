@@ -1,0 +1,68 @@
+@use "global" as *;
+
+.hero__contents {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+}
+
+.hero__inner {
+  position: absolute;
+  align-items: center;
+  color: $white;
+  top: calc(50% + rem(330));
+  left: 50%;
+  transform: translate(-50%, -50%);
+  @include mq(md) {
+    top: calc(50% + rem(424));
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.hero__title {
+  font-size: rem(40);
+  letter-spacing: rem(21.5);
+  display: block;
+  font-family: $third-font-family;
+  font-weight: $regular;
+  text-align: center;
+  margin-left: rem(22);
+  @include mq(md) {
+    font-weight: $normal;
+    font-size: rem(40);
+    margin-left: rem(43.2);
+    font-size: rem(80);
+    letter-spacing: rem(43.2);
+    line-height: rem(100);
+  }
+}
+
+.hero__subtitle {
+  display: block;
+  font-size: rem(20);
+  font-family: $second-font-family;
+  font-weight: $regular;
+  text-align: center;
+  @include mq(md) {
+    font-size: rem(20);
+    font-family: $second-font-family;
+    line-height: normal;
+  }
+}
+.hero__img{ 
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.hero_img img{
+  z-index: 10; 
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}

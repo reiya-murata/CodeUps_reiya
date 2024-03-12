@@ -1,0 +1,12 @@
+@use "global" as *;
+
+.about {
+  position: relative;
+}
+.section__about {
+  padding: rem(78) 0 rem(168);
+  @include mq(md) {
+    padding: rem(130) 0 rem(400);
+    overflow: hidden;
+  }
+}

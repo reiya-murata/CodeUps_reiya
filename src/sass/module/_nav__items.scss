@@ -1,0 +1,104 @@
+@use "global" as *;
+
+.nav__items {
+  display: flex;
+  justify-content: space-between;
+  z-index: 10;
+  color: $white;
+  font-weight: $regular;
+  padding-top: rem(0);
+  z-index: 15;
+  padding-top: rem(70);
+  padding-left: rem(36);
+  line-height: rem(16);
+  @include mq(md) {
+    padding-top: rem(0);
+    font-weight: $regular;
+    font-family: $base-font-family;
+  }
+}
+.nav__items li {
+  text-align: start;
+}
+
+.nav_item a {
+  display: block;
+}
+
+.nav__items--left {
+  width: 50%;
+  font-family: $base-font-family;
+  font-size: rem(16);
+  color: $white;
+  height: 100vh;
+  z-index: 15;
+}
+.nav__items--right {
+  margin-left: rem(8);
+  width: 50%;
+  font-family: $base-font-family;
+  font-size: rem(16);
+  color: $white;
+  height: 100vh;
+}
+
+.nav__items .nav__item {
+  padding-top: rem(26);
+}
+.nav__item {
+  padding-top: rem(24);
+  @include mq(md) {
+    padding-top: rem(24);
+  }
+}
+
+.nav__items .nav__item--bold {
+  font-weight: $bold;
+  margin-top: rem(42);
+}
+
+.nav__item--bold {
+  font-weight: $bold;
+  margin-top: rem(40);
+  @include mq(md) {
+    font-weight: $bold;
+    margin-top: rem(40);
+  }
+}
+
+.nav__item--bold.top {
+  margin-top: rem(34);
+  font-weight: $bold;
+  @include mq(md) {
+    font-weight: $bold;
+    margin-top: rem(0);
+  }
+}
+
+.nav__item--bottom {
+  z-index: 10;
+  color: $white;
+  font-weight: $regular;
+  @include mq(md) {
+    // justify-content: space-around;
+    // margin: auto;
+  }
+}
+.nav__bottom--icons {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+}
+
+.nav__items--left--bottom {
+  width: 50%;
+  font-family: $base-font-family;
+  font-size: rem(16);
+  color: $white;
+}
+.nav__item--right--bottom {
+  width: 50%;
+  font-family: $base-font-family;
+  font-size: rem(16);
+  color: $white;
+}

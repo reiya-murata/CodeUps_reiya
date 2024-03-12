@@ -1,0 +1,12 @@
+@use "global" as *;
+
+.voice {
+  font-family: $base-font-family;
+  position: relative;
+}
+.section__voice {
+  margin-bottom: rem(84);
+  @include mq(md) {
+    margin-bottom: rem(144);
+  }
+}

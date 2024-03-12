@@ -1,0 +1,203 @@
+@use "global" as *;
+// header
+.logo__img--codeups img {
+  position: absolute;
+  display: inline-block;
+  width: rem(113);
+  top: rem(21);
+  left: rem(10);
+  z-index: 25;
+  @include mq(md) {
+    left: rem(40);
+    width: rem(133);
+  }
+}
+.logo__img--codeups a {
+  display: inline-block;
+}
+// about
+.about__logo {
+  display: none;
+  @include mq(md) {
+    position: absolute;
+    display: block;
+    width: rem(194);
+    height: rem(181);
+    top: calc(50% + rem(696));
+    left: calc(50% + rem(540));
+    transform: translate(-50%, -50%);
+  }
+}
+
+// blog
+.blog__logo--1 {
+  display: none;
+  @include mq(md) {
+    position: absolute;
+    display: block;
+    width: rem(437);
+    height: rem(201);
+    top: calc(50% - rem(360));
+    left: calc(50% - rem(400));
+    transform: translate(-50%, -50%);
+  }
+}
+.blog__logo--2 {
+  display: none;
+  z-index: 15;
+  @include mq(md) {
+    position: absolute;
+    display: block;
+    width: rem(301);
+    height: rem(138);
+    top: calc(50% + rem(438));
+    left: calc(50% - rem(470));
+    transform: translate(-50%, -50%);
+  }
+}
+
+// voice
+.voice__logo--ibaratatu {
+  display: none;
+  position: absolute;
+  z-index: 10;
+  @include mq(md) {
+    top: calc(50% + rem(302));
+    left: calc(50% + rem(506));
+    transform: translate(-50%, -50%);
+    display: block;
+    width: rem(71);
+    height: rem(162);
+  }
+}
+// price
+
+.logo__price {
+  position: absolute;
+  display: none;
+  @include mq(md) {
+    width: rem(437);
+    height: rem(201);
+    top: calc(50% + rem(435));
+    left: calc(50% - rem(402));
+    transform: translate(-50%, -50%);
+    z-index: 15;
+    display: block;
+  }
+}
+
+
+// contact
+.contact__logo--fish {
+  position: absolute;
+  width: rem(109);
+  height: rem(50);
+  top: calc(50% - rem(278));
+  left: calc(50% + rem(118));
+  transform: translate(-50%, -50%);
+  @include mq(md) {
+    position: absolute;
+    width: rem(301);
+    height: rem(138);
+    top: calc(50% - rem(188));
+    left: calc(50% + rem(520));
+    transform: translate(-50%, -50%);
+    z-index: 10;
+  }
+}
+.contact__logo--codeups {
+  position: relative;
+  text-align: center;
+
+  @include mq(md) {
+    position: relative;
+    padding: 0 rem(119) rem(9) rem(121);
+    margin: rem(80) rem(82) rem(24) rem(50);
+  }
+}
+.contact__logo--codeups source {
+  width: rem(174);
+  @include mq(md) {
+    width: rem(200);
+  }
+}
+.contact__logo--codeups img {
+  z-index: 15;
+  width: rem(295);
+  top: calc(50% + rem(115));
+  left: calc(50% + rem(0));
+  transform: translate(-50%, -50%);
+  border-bottom: rem(1) solid $blue;
+  padding: 0 rem(60) rem(6);
+  @include mq(md) {
+    width: rem(440);
+    padding: 0 rem(120) rem(8);
+    top: calc(50% + rem(38));
+    left: calc(50% + rem(0));
+    transform: translate(-50%, -50%);
+  }
+}
+
+// footer
+.logo__img--codeups--bottom {
+  position: absolute;
+  width: rem(120);
+  height: rem(45);
+  z-index: 15;
+  top: calc(50% + rem(70));
+  left: calc(50% + rem(76));
+  transform: translate(-50%, -50%);
+  @include mq(md) {
+    position: absolute;
+    width: rem(200);
+    top: calc(50% + rem(104));
+    left: calc(50% + rem(280));
+    transform: translate(-50%, -50%);
+  }
+}
+
+.sns__icons {
+  display: flex;
+  position: absolute;
+  @include mq(md) {
+    position: absolute;
+    top: rem(118);
+    left: rem(420);
+  }
+}
+.instagram__icon {
+  position: absolute;
+  z-index: 10;
+  top: calc(50% + rem(120));
+    left: calc(50% + rem(68));
+    transform: translate(-50%, -50%);
+    width: rem(24);
+    height: rem(24);
+  @include mq(md) {
+    position: absolute;
+    top: calc(50% + rem(16));
+    left: calc(50% + rem(64));
+    transform: translate(-50%, -50%);
+    width: rem(32);
+    height: rem(32);
+    z-index: 10;
+  }
+}
+.facebook__icon {
+  position: absolute;
+  z-index: 10;
+  top: calc(50% + rem(120));
+    left: calc(50% + rem(28));
+    transform: translate(-50%, -50%);
+    width: rem(24);
+    height: rem(24);
+  @include mq(md) {
+    position: absolute;
+    top: calc(50% + rem(16));
+    left: calc(50% + rem(16));
+    transform: translate(-50%, -50%);
+    width: rem(32);
+    height: rem(32);
+    z-index: 10;
+  }
+}

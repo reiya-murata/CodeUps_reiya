@@ -1,0 +1,16 @@
+@use "global" as *;
+
+.section__campaign {
+  position: relative;
+  text-align: center;
+  margin-top: rem(36);
+  @include mq(md) {
+    margin-top: rem(131);
+  }
+}
+
+.section__campaign h2 {
+  @include mq(md) {
+    padding-right: rem(16);
+  }
+}
